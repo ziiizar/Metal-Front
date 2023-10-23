@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import FavIcon from "./FavIcon";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../../../hooks/useCart";
 
 const ProductCard = ({
   name,

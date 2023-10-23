@@ -23,13 +23,12 @@ const MakeOrderButton = () => {
         orden_id: 12,
         user_id: 1,
         date: currentDate,
-        estado: "pendiente"
+        estado: "pendiente",
       };
-      console.log("newOrden")
-      console.log(newOrden)
-      setOrden(newOrden)
+      console.log("newOrden");
+      console.log(newOrden);
+      setOrden(newOrden);
       const post = await makeOrder(token, newOrden, 1);
-      // console.log(cart);
       //   clearCart();
     } catch (error) {
       console.log(error.response.data);

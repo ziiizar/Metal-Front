@@ -5,16 +5,16 @@ import ProductsPage from "./scenes/Products/ProductsPage.jsx";
 import HeaderPW from "./scenes/global/HeaderPW.jsx";
 import FooterPW from "./scenes/global/FooterPW.jsx";
 import CreateNewEvent from "./scenes/Events/New Event/CreateNewEvent.jsx";
-import NewProduct from "./scenes/Products/NewProduct.jsx";
+import NewProduct from "./scenes/Products/NewProduct/NewProduct.jsx";
 import LogIn from "./scenes/Login/LogIn.jsx";
-import SignIn from "./scenes/Login-dos/SignIn.jsx";
-import SignUp from "./scenes/Login-dos/SignUp.jsx";
-import ForgotP from "./scenes/Login-dos/ForgotP.jsx";
-import ProfilePage from "./scenes/Profile/ProfilePage.jsx";
-import OrdersPage from "./scenes/Profile/OrdersPage.jsx";
+// import SignIn from "./scenes/Login-dos/SignIn.jsx";
+// import SignUp from "./scenes/Login-dos/SignUp.jsx";
+// import ForgotP from "./scenes/Login-dos/ForgotP.jsx";
+import ProfilePage from "./scenes/Profile/ProfilePage/ProfilePage.jsx";
+import OrdersPage from "./scenes/Profile/OrdersPage/OrdersPage.jsx";
 import CartPage from "./scenes/ShoppingCar/CartPage.jsx";
 import { CartProvider } from "./context/Cart.jsx";
-import DetailledOrderPage from "./scenes/Profile/DetailledOrderPage.jsx";
+import DetailledOrderPage from "./scenes/Profile/OrdersPage/DetailledOrder/DetailledOrderPage.jsx";
 
 function App() {
   return (
@@ -28,9 +28,9 @@ function App() {
             <Route path="/Events" Component={EventsPage}></Route>
             <Route path="/Events/NewEvent" Component={CreateNewEvent}></Route>
             <Route path="/" Component={HomePage}></Route>
-            <Route path="/LogIn" Component={SignIn}></Route>
-            <Route path="/SignUp" Component={SignUp}></Route>
-            <Route path="/ForgotPassword" Component={ForgotP}></Route>
+            <Route path="/LogIn" Component={LogIn}></Route>
+            {/* <Route path="/SignUp" Component={SignUp}></Route>
+            <Route path="/ForgotPassword" Component={ForgotP}></Route> */}
             <Route path="/MyProfile" Component={ProfilePage}></Route>
 
             <Route

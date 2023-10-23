@@ -11,7 +11,7 @@ export default function useDetailledProducts({ ordenData }) {
       setData(newData);
     };
     fetchData();
-  }, [token,ordenData]);
+  }, [token, ordenData]);
 
   return { data };
 }

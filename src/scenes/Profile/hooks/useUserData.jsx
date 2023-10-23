@@ -7,12 +7,8 @@ export function useUserData() {
   const token = window.localStorage.getItem("token");
 
   useEffect(() => {
-    // console.log("token");
-    // console.log(token);
-    loadMe(token).then(setData)
+    loadMe(token).then(setData);
   }, [token]);
-
-  // console.log(data)
 
   return { data };
 }

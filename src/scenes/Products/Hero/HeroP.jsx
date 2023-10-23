@@ -1,14 +1,14 @@
 import Products from "./Products";
 import { Link } from "react-router-dom";
 import Filters from "./Filters";
-import { useFilters } from "./hooks/useFilters";
-import useLoadProducts from "./hooks/useLoadProducts";
+import { useFilters } from "../hooks/useFilters";
+import useLoadProducts from "../hooks/useLoadProducts";
 
 const HeroP = () => {
   const { products } = useLoadProducts();
   const { setFilters, filterProducts } = useFilters();
-  console.log("products")
-  console.log(products)
+  console.log("products");
+  console.log(products);
 
   return (
     <div className="w-full flex flex-col min-h-screen h-full">

@@ -13,16 +13,8 @@ const LogIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  //   const handleLog = () => {
-  //     setIsLoggedIn(!isLoggedIn)
-  //     console.log("sirve")
-
-  // }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // const response = login(username,password)
 
     try {
       const resp = await axios.post(
@@ -31,6 +23,7 @@ const LogIn = () => {
         {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
+            "Acces-Controll-Allow-Origin": "*",
           },
         }
       );
@@ -47,12 +40,6 @@ const LogIn = () => {
     }
 
     console.log(username, password);
-
-    // console.log(resp.data)
-
-    // console.log(isLoged)
-    // console.log(setIsLoged)
-    // handleLog()
   };
 
   return (
@@ -74,18 +61,6 @@ const LogIn = () => {
         </div>
 
         <div className="flex flex-col space-y-8 mt-8">
-          {/* <div className="h-10 transition-all flex outline outline-1 outline-blue-500 rounded-md  bg-orange-800" id="correo">
-        <input onChange={(e)=>setEmail(e.target.value)} className="w-11/12 pl-3 h-full outline-none  bg-orange-800" type="email" name="" id="correo" placeholder=" Correo"/>
-        <div className='flex items-center'>
-          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-          <lord-icon
-              src="https://cdn.lordicon.com/tyounuzx.json"
-              trigger="hover"
-              colors="primary:#121331,secondary:#ffffff"
-              style={{width:"25px",height:"25px"}}>
-          </lord-icon>
-        </div>
-      </div> */}
           <div className="h-10 max-w-sm">
             <input
               onChange={(e) => setUsername(e.target.value)}
@@ -106,9 +81,6 @@ const LogIn = () => {
               placeholder=" Contrasena"
             />
           </div>
-          {/* <div className="h-10 max-w-sm transition-all" id="check">
-        <input onChange={(e)=>setRol(e.target.value)} className="w-full h-full pl-3 rounded-md bg-orange-800" type="text" name="" id="check" placeholder=" Rol"/>
-      </div> */}
 
           <div className="h-[1px] bg-sky-800"></div>
 

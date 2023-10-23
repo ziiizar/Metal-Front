@@ -1,13 +1,12 @@
 import React from "react";
-import useLoadOrders from "./hooks/useLoadOrders";
+import useLoadOrders from "../hooks/useLoadOrders";
 import OrderCard from "./OrderCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const OrdersPage = () => {
-
-  const {user_id} = useParams();
+  const { user_id } = useParams();
   const { orders } = useLoadOrders(user_id);
 
   return (

@@ -1,4 +1,4 @@
-import HeroP from "./HeroP";
+import HeroP from "./Hero/HeroP";
 
 const ProductsPage = () => {
   return (

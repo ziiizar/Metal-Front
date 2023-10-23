@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import FavIcon from "./FavIcon";
+import ProductCard from "./ProductCards/ProductCard";
+import FavIcon from "./ProductCards/FavIcon";
 import PropTypes from "prop-types";
 
 const Products = ({ products }) => {
@@ -18,10 +18,7 @@ const Products = ({ products }) => {
             btnText={"Ordenar"}
           />
 
-          <FavIcon
-            className=""
-            fav={producto.favorite}
-          />
+          <FavIcon className="" fav={producto.favorite} />
         </li>
       ))}
     </>

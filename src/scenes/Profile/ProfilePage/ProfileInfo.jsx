@@ -1,15 +1,11 @@
-import React from 'react'
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-
-const ProfileInfo = ({userData}) => {
-  
-
-    // console.log(userData)
+const ProfileInfo = ({ userData }) => {
   return (
-    <>  
-        <div className="flex">
+    <>
+      <div className="flex">
         <img
           className="w-[120px] h-[180px] rounded-full bg-gray-800"
           src=""
@@ -18,32 +14,29 @@ const ProfileInfo = ({userData}) => {
         <h2>Nombre de perfil</h2>
       </div>
       <div className="flex flex-col">
-        <div >
-          <label htmlFor=""> username:     </label>
+        <div>
+          <label htmlFor=""> username: </label>
           <h3>{userData.username}</h3>
         </div>
         <div>
-         
-         <label htmlFor=""> email:    </label>
+          <label htmlFor=""> email: </label>
           <h3>{userData.email}</h3>
         </div>
         <div>
-
-          <label htmlFor="">  rol:    </label>
+          <label htmlFor=""> rol: </label>
           <h3>{userData.rol}</h3>
         </div>
 
-        <button className="bg-green-700"><Link  to={`/MyProfile/Orders/${userData.id}`}>Mis Ordenes </Link></button>
-        
-        </div>
-         
-        
-        </>
-  )
-}
+        <button className="bg-green-700">
+          <Link to={`/MyProfile/Orders/${userData.id}`}>Mis Ordenes </Link>
+        </button>
+      </div>
+    </>
+  );
+};
 
 // ProfileInfo.propTypes ={
 //     userData: PropTypes.array
 //   }
 
-export default ProfileInfo
+export default ProfileInfo;

@@ -1,12 +1,12 @@
-import useUserData from "./hooks/useUserData";
-import { useLoged } from "../../hooks/useLoged";
+import useUserData from "../hooks/useUserData";
+import { useLoged } from "../../../hooks/useLoged";
 import ProfileInfo from "./ProfileInfo";
 
 const ProfilePage = () => {
-  const {data} = useUserData();
+  const { data } = useUserData();
   const { logOut } = useLoged();
 
-  console.log(data)
+  console.log(data);
 
   return (
     <div className="w-full h-full flex flex-col items-center place-content-center">

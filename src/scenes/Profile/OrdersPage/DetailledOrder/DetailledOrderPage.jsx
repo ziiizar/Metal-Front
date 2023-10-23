@@ -1,8 +1,8 @@
 import React from "react";
-import useDetailledOrder from "./hooks/useDetailledOrder";
+import useDetailledOrder from "../../hooks/useDetailledOrder";
 import DetailledOrderCard from "./DetailledOrderCard";
 import { useParams } from "react-router-dom";
-import useDetailledProducts from "./hooks/useDetailledProducts";
+import useDetailledProducts from "../../hooks/useDetailledProducts";
 
 const DetailledOrderPage = () => {
   const orden_id = useParams();

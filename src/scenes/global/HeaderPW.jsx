@@ -5,10 +5,8 @@ import { defineElement } from "lord-icon-element";
 import { useLoged } from "../../hooks/useLoged";
 
 const HeaderPW = () => {
-  const { isLoged, } = useLoged();
+  const { isLoged } = useLoged();
 
-
- 
   defineElement(lottie.loadAnimation);
 
   return (
@@ -49,7 +47,10 @@ const HeaderPW = () => {
               Quienes Somos
             </a>
           </Link>
-          <Link to={"ShoppingCar"} className="max-sm:my-3 max-sm:mx-3  hover:text-amber-700 transition-all">
+          <Link
+            to={"ShoppingCar"}
+            className="max-sm:my-3 max-sm:mx-3  hover:text-amber-700 transition-all"
+          >
             <a className="inline-block" href="#">
               <lord-icon
                 src="https://cdn.lordicon.com/slkvcfos.json"
@@ -61,14 +62,10 @@ const HeaderPW = () => {
             </a>
           </Link>
 
-          
-          
-         { isLoged ? (
+          {isLoged ? (
             <Link to={"MyProfile"}>
               <button className="bg-red-950 rounded-full">P</button>
             </Link>
-
-            
           ) : (
             <Link className="max-sm:my-3 max-sm:mx-3" to="/LogIn">
               <button className="bg-orange-400 hover:bg-orange-800 border-orange-500 px-2 py-1.5 rounded-md duration-500">

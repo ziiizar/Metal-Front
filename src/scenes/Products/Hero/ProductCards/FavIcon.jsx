@@ -20,7 +20,7 @@ const FavIcon = ({ fav }) => {
       className="w-auto bg-white rounded-s-full rounded-e-full flex items-center "
     >
       <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-      <lord-icon 
+      <lord-icon
         src="https://cdn.lordicon.com/hqrgkqvs.json"
         trigger="hover"
         colors={color}

@@ -3,7 +3,6 @@ import axios from "axios";
 import { useState } from "react";
 
 const NewProduct = () => {
-
   return (
     <div className="bg-green-800 w-[800px] h-[600px] flex place-content-center items-center">
       <form className="gap-4 flex flex-wrap" action="">

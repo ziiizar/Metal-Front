@@ -8,5 +8,5 @@ export async function makeOrder(token, orden, products_ids) {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
-  return resp
+  return resp;
 }
