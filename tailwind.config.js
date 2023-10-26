@@ -18,8 +18,22 @@ export default {
       gridTemplateRows: {
         'card': 'repeat(auto-fill, minmax(100px, 300px))',
   
+      },
+      fontSize: {
+        8: '8px',
+        12: '12px'
+       
+      },
+      lineHeight: {
+        'chiquita': '10px',
+        
       }
+
+
+
     },
+
+   
 
     
     

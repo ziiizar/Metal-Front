@@ -15,13 +15,15 @@ import OrdersPage from "./scenes/Profile/OrdersPage/OrdersPage.jsx";
 import CartPage from "./scenes/ShoppingCar/CartPage.jsx";
 import { CartProvider } from "./context/Cart.jsx";
 import DetailledOrderPage from "./scenes/Profile/OrdersPage/DetailledOrder/DetailledOrderPage.jsx";
+import HeaderNuevo from "./scenes/global/HeaderNuevo.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="bgPractica min-h-screen h-full  w-full">
+      <div className="bg-slate-100 min-h-screen h-full  w-full">
         <CartProvider>
-          <HeaderPW />
+          <HeaderNuevo></HeaderNuevo>
+          {/* <HeaderPW /> */}
           <Routes>
             <Route path="/Products" Component={ProductsPage}></Route>
             <Route path="/Products/NewProduct" Component={NewProduct}></Route>
