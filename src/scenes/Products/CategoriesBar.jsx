@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CategoriesBar = () => {
   return (
-    <section className="flex w-[90%] h-[10%] justify-between items-center gap-3 overflow-scroll">
+    <section className="flex w-[90%] h-[10%] justify-between items-center gap-3 overflow-auto">
       <CategorieButton text={"Fundicion"} />
       <CategorieButton text={"Manualidades"} />
       <CategorieButton text={"Materiales"} />
