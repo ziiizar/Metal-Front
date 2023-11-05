@@ -16,6 +16,7 @@ import CartPage from "./scenes/ShoppingCar/CartPage.jsx";
 import { CartProvider } from "./context/Cart.jsx";
 import DetailledOrderPage from "./scenes/Profile/OrdersPage/DetailledOrder/DetailledOrderPage.jsx";
 import HeaderNuevo from "./scenes/global/HeaderNuevo.jsx";
+import DetailledProductPage from "./scenes/DetailledProduct/DetailledProductPage.jsx";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           {/* <HeaderPW /> */}
           <Routes>
             <Route path="/Products" Component={ProductsPage}></Route>
+            <Route
+              path="/Products/:product_id"
+              element={
+                // <ProductDataProvider>
+                <DetailledProductPage></DetailledProductPage>
+                // </ProductDataProvider>
+              }
+            ></Route>
             <Route path="/Products/NewProduct" Component={NewProduct}></Route>
             <Route path="/Events" Component={EventsPage}></Route>
             <Route path="/Events/NewEvent" Component={CreateNewEvent}></Route>

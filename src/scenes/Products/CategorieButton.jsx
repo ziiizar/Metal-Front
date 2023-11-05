@@ -11,7 +11,7 @@ const CategorieButton = ({ text }) => {
   return (
     <button
       onClick={filtro}
-      className="p-2 h-3/4 bg-orange-400 hover:bg-orange-800 transition-all rounded-full max-sm:hidden"
+      className="py-1 px-2 h-[60%] bg-gray-400 hover:bg-black transition-all rounded-md flex place-content-center items-center"
     >
       {text}
     </button>
