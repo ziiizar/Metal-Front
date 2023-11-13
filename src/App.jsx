@@ -7,9 +7,8 @@ import FooterPW from "./scenes/global/FooterPW.jsx";
 import CreateNewEvent from "./scenes/Events/New Event/CreateNewEvent.jsx";
 import NewProduct from "./scenes/Products/NewProduct/NewProduct.jsx";
 import LogIn from "./scenes/Login/LogIn.jsx";
-// import SignIn from "./scenes/Login-dos/SignIn.jsx";
-// import SignUp from "./scenes/Login-dos/SignUp.jsx";
-// import ForgotP from "./scenes/Login-dos/ForgotP.jsx";
+import SignUp from "./scenes/Login/SignUp.jsx";
+
 import ProfilePage from "./scenes/Profile/ProfilePage/ProfilePage.jsx";
 import OrdersPage from "./scenes/Profile/OrdersPage/OrdersPage.jsx";
 import CartPage from "./scenes/ShoppingCar/CartPage.jsx";
@@ -21,7 +20,7 @@ import DetailledProductPage from "./scenes/DetailledProduct/DetailledProductPage
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-slate-100 min-h-screen h-full  w-full">
+      <div className="bg-fondo min-h-screen h-full  w-full">
         <CartProvider>
           <HeaderNuevo></HeaderNuevo>
           {/* <HeaderPW /> */}
@@ -40,8 +39,8 @@ function App() {
             <Route path="/Events/NewEvent" Component={CreateNewEvent}></Route>
             <Route path="/" Component={HomePage}></Route>
             <Route path="/LogIn" Component={LogIn}></Route>
-            {/* <Route path="/SignUp" Component={SignUp}></Route>
-            <Route path="/ForgotPassword" Component={ForgotP}></Route> */}
+             <Route path="/SignUp" Component={SignUp}></Route>
+            {/* <Route path="/ForgotPassword" Component={ForgotP}></Route>  */}
             <Route path="/MyProfile" Component={ProfilePage}></Route>
 
             <Route

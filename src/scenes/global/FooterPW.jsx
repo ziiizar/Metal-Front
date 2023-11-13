@@ -1,6 +1,6 @@
 const FooterPW = () => {
   return (
-    <footer className="bg-black mt-8  text-white flex flex-col justify-between pt-5 px-4 gap-2">
+    <footer className="bg-black   text-white flex flex-col justify-between pt-5 px-4 gap-2">
       <div className="flex justify-between w-full h-[70%] place-content-center items-center ">
         <div className=" flex place-content-center items-center h-full w-[30%] ">
           <img

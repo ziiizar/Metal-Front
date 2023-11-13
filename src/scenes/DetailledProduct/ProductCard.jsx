@@ -1,6 +1,6 @@
 const ProductCard = ({image, description, price, name, total}) => {
   return (
-    <section className="flex flex-col text-black w-[90%] h-[68%]">
+    <section className="flex flex-col text-black w-[90%] h-[60vh]">
       <div className="flex w-full h-[50%]">
 
     {/* <svg
@@ -17,13 +17,13 @@ const ProductCard = ({image, description, price, name, total}) => {
     </svg> */}
 
 
-        <img className="w-full flex h-full" src={image} alt="" />
+        <img className="w-full flex h-full aspect-[31/19]" src={image} alt="" />
       </div>
       <div className="flex h-[10%] justify-between ">
         <strong className=""> {name}</strong>
         <p> {price}CUP</p>
       </div>
-      <div className="flex flex-col h-[30%]">
+      <div className="flex flex-col h-[20%]">
         <div> <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16"

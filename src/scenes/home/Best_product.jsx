@@ -28,7 +28,7 @@ const Best_product = ({ name, image, description, price, btnText, id }) => {
         <img
           src={image}
           alt="evento"
-          className="h-[150%] w-full absolute top-[-60%]"
+          className="h-[150%] w-full absolute top-[-60%] "
         />
       </div>
       <div className="w-[90%] h-[50%] flex flex-col justify-between px-1  gap-1 place-content-center">
@@ -48,10 +48,10 @@ const Best_product = ({ name, image, description, price, btnText, id }) => {
            
           </button>
         </div>
-        <div className="flex place-content-center items-center">
+        <div className="flex place-content-center items-center relative">
           <button  onClick={() => {
                 handleClick(item);
-              }} className="bg-gray-600 text-white px-2 rounded-full">{btnText}</button>
+              }} className="absolute top-[-10px] bg-gray-600 text-white px-2 rounded-full">{btnText}</button>
         </div>
       </div>
     </article>

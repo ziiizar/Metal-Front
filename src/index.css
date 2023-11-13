@@ -131,3 +131,15 @@ filter: blur(13.5px);
     box-shadow: theme('boxShadow.xl')
   }
 } */
+
+
+.azulLogin{
+  border-radius: 0px 0px 0px 300px;
+background: rgba(69, 89, 128, 0.57);
+backdrop-filter: blur(35px);
+}
+
+.negroLogin{
+  border-radius: 0px 300px 0px 0px;
+background: rgba(0, 0, 0, 0.79);
+}

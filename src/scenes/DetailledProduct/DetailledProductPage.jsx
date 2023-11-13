@@ -14,7 +14,7 @@ const DetailledProductPage = () => {
   
 
   return (
-    <div className="flex flex-col gap-4 place-content-center items-center h-screen w-full">
+    <div className="flex flex-col gap-4 place-content-center items-center h-auto w-full">
       <SearchBar></SearchBar>
       <ProductCard
         description={productData.description}

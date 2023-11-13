@@ -8,7 +8,7 @@ const Products = ({ products }) => {
   return (
     <>
       {products.map((producto) => (
-        <li className=" w-[48%] h-full flex" key={producto.product_id}>
+        <li className=" w-[48%] h-[40%] flex" key={producto.product_id}>
           <Best_product
             name={producto.name}
             // category={producto.category}

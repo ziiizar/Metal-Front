@@ -11,14 +11,11 @@ const HeroP = () => {
   console.log(products);
 
   return (
-    <div className="w-full flex place-content-center items-center h-full ">
-
-   
-
+    <div className="w-full flex place-content-center items-center h-screen pt-16">
       <section className="flex w-[90%] h-full ">
-      <ul className=" flex flex-wrap  justify-between w-full h-full gap-2">
-        <Products products={filterProducts(products)} />
-      </ul>
+        <ul className=" flex flex-wrap  justify-between w-full h-full gap-2">
+          <Products products={filterProducts(products)} />
+        </ul>
       </section>
     </div>
   );

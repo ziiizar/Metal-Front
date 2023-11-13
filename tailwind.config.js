@@ -28,6 +28,10 @@ export default {
         'chiquita': '10px',
         
       }
+      ,
+      colors: {
+        'fondo': '#E0E0E5',
+      },
 
 
 

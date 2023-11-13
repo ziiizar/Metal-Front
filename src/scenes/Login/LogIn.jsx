@@ -4,14 +4,24 @@ import axios from "axios";
 import { useState } from "react";
 import { useLoged } from "../../hooks/useLoged";
 import { login } from "./services/login";
+import Terms from "./Terms";
+import Title from "./Title";
+import Welcome from "./Welcome";
+import Button from "./Button";
 
 const LogIn = () => {
   const navigate = useNavigate();
   const { isLoged, setIsLoged, logIn, token, setToken, handleToken } =
     useLoged();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+    const [form, setForm] = useState({
+      username: "",
+      password: "",
+      
+    });
+  const handleForm = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +29,7 @@ const LogIn = () => {
     try {
       const resp = await axios.post(
         "http://127.0.0.1:8000/Users/Login",
-        { username, password },
+        { username:form.username, password:form.password },
         {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -39,58 +49,64 @@ const LogIn = () => {
       console.log(error.response.data);
     }
 
-    console.log(username, password);
   };
 
-  return (
-    <div className="h-full min-h-screen w-full flex place-content-center  ">
-      <form
-        onSubmit={handleSubmit}
-        className="w-2/5 h-4/5 flex gap-3 place-content-center bg-gray-800 mt-10 flex-col px-4 py-3 shadow-lg rounded-md max-w-sm min-w-fit shrink-[40] "
-      >
-        <div className="flex place-content-start">
-          <img
-            src="../assets/Nuevo LOgo metalconf.png"
-            alt="logo"
-            className="w-[50px]"
-          />
-        </div>
-        <div className="flex mr-3 ml-3 justify-start space-x-8 text-white ">
-          <li className="list-none mr-3 cursor-pointer ">Iniciar Sesion</li>
-          <li className="list-none cursor-pointer ">Crear Cuenta</li>
-        </div>
 
-        <div className="flex flex-col space-y-8 mt-8">
-          <div className="h-10 max-w-sm">
-            <input
-              onChange={(e) => setUsername(e.target.value)}
-              className="w-full pl-3 h-full rounded-md bg-orange-800"
-              type="text"
-              name=""
-              id=""
-              placeholder=" Usuario"
-            />
-          </div>
-          <div className="h-10 max-w-sm">
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full h-full pl-3 rounded-md bg-orange-800"
-              type="password"
-              name=""
-              id=""
-              placeholder=" Contrasena"
-            />
-          </div>
+return (
 
-          <div className="h-[1px] bg-sky-800"></div>
-
-          <button className="w-full h-10 rounded-md hover:bg-amber-800 transition-all bg-amber-600">
-            Aceptar
-          </button>
+  
+  <Welcome>
+   
+      <div className="flex flex-col justify-between h-3/4 gap-y-4 text-black z-20">
+        <div className="flex flex-col gap-y-2 w-full h-[90%]">
+          <Title title={"Iniciar Sesion"} subtitle={""} />
+          <form onSubmit={handleSubmit} className="flex flex-col gap-10 w-full" action="">
+            <div className="flex flex-col gap-5 w-full">
+            <div className="relative flex w-full">
+                <input required
+                  onChange={handleForm}
+                  className="h-auto  bg-inherit border-b-[1px]  border-gray-800 focus:border-purple-600 transition-colors peer px-2 py-[2px]  outline-none w-full"
+                  // placeholder="Username"
+                  type="text"
+                  name="username"
+                  id=""
+                />
+                <label htmlFor="input" className="absolute top-1 left-0  peer-focus:text-12 peer-focus:-top-3 peer-valid:text-12 peer-valid:-top-3  transition-all peer-focus:text-black  text-gray-600 pointer-events-none" >Usuario</label>
+              </div>
+              <div className="relative flex w-full">
+                <input required
+                  onChange={handleForm}
+                  className="h-auto  bg-inherit border-b-[1px]  border-gray-800 focus:border-purple-600 transition-colors peer px-2 py-[2px]  outline-none w-full"
+                  // placeholder="Username"
+                  type="text"
+                  name="password"
+                  id=""
+                />
+                <label htmlFor="input" className="absolute top-1 left-0  peer-focus:text-12 peer-focus:-top-3 peer-valid:text-12 peer-valid:-top-3 transition-all peer-focus:text-black  text-gray-600 pointer-events-none" >Contraseña</label>
+              </div>
+            </div>
+           
+            <div className=" flex flex-col gap-y-2 place-content-center items-center">
+              <Button text={"Iniciar Sesion"}></Button>
+              {/* <Link className="text-xs self-center" to="/ForgotP">
+                Forgot password?
+              </Link> */}
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-  );
+        <div className=" flex flex-col place-content-center items-center gap-y-2 text-xs w-full h-[20%]">
+          
+        
+        </div>
+      </div>
+      <Terms
+        text={"No tienes cuenta?"}
+        link={<Link className="hover:text-orange-800" to="/SignUp">Jodete</Link>}
+      />
+    
+  </Welcome>
+);
+
 };
 
 export default LogIn;
