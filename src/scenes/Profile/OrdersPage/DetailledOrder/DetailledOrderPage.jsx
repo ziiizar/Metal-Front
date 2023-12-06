@@ -12,11 +12,10 @@ const DetailledOrderPage = () => {
   const { data } = useDetailledProducts({ ordenData: ordenData });
 
   return (
-    <div>
-      <ul>
+    <div className="flex flex-col w-[90%] gap-5 ">
+       <ul className="flex flex-col w-full gap-2 ">
         {data.map((product) => (
-          <li className="flex" key={product.product_id}>
-            <div>{product.product_id}</div>
+          <li  className="text-black border-b-[1px] border-black w-full pb-2 min-h-[150px]" key={product.product_id}>
             <DetailledOrderCard
               image={product.image}
               name={product.name}

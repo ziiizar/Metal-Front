@@ -8,12 +8,13 @@ const Products = ({ products }) => {
   return (
     <>
       {products.map((producto) => (
-        <li className=" w-[48%] h-[40%] flex" key={producto.product_id}>
-          <Best_product
+        <li className="  text-black flex" key={producto.product_id}>
+          <ProductCard
             name={producto.name}
+            color={"bg-gris"}
             // category={producto.category}
             price={producto.price}
-            description={producto.description}
+            // description={producto.description}
             image={producto.image}
             id={producto.product_id}
             btnText={"Ordenar"}

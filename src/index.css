@@ -135,7 +135,7 @@ filter: blur(13.5px);
 
 .azulLogin{
   border-radius: 0px 0px 0px 300px;
-background: rgba(69, 89, 128, 0.57);
+background: #91AF9B;
 backdrop-filter: blur(35px);
 }
 
@@ -143,3 +143,15 @@ backdrop-filter: blur(35px);
   border-radius: 0px 300px 0px 0px;
 background: rgba(0, 0, 0, 0.79);
 }
+
+.carrito{
+  border-radius: 50px;
+background: rgba(39, 98, 52, 0.75);
+}
+
+
+/* .sombra {
+  opacity: var(--Number, 1);
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+box-shadow: 4px 4px 60px 0px rgba(0, 0, 0, 0.65);
+} */

@@ -2,7 +2,7 @@ import RelatedArticles from "./RelatedArticles";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useLoadProduct from "./hooks/useLoadProduct";
-import ProductCard from "./ProductCard";
+import DetailledProductCard from "./DetailledProductCard";
 import SearchBar from "./../Products/SearchBar";
 
 
@@ -14,16 +14,17 @@ const DetailledProductPage = () => {
   
 
   return (
-    <div className="flex flex-col gap-4 place-content-center items-center h-auto w-full">
+    <div className="flex flex-col gap-4 place-content-center items-center h-auto w-full pt-5">
       <SearchBar></SearchBar>
-      <ProductCard
+      <DetailledProductCard
+      product_id={product_id}
         description={productData.description}
         image={productData.image}
         name={productData.name}
         price={productData.price}
         total={0}
         key={productData.id}
-      ></ProductCard>
+      ></DetailledProductCard>
       <RelatedArticles category={category}></RelatedArticles>
     </div>
   );

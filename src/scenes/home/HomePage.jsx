@@ -1,42 +1,25 @@
+import CommentSection from "./CommentSection.jsx";
 import Hero from "./Hero.jsx";
-import Best_product from "./Best_product.jsx";
 import PromoCard from "./PromoCard.jsx";
+import PromoSection from "./PromoSection.jsx";
+import TopProductsSection from "./TopProductsSection.jsx";
 
 function HomePage() {
   return (
-    <div className=" w-full min-h-screen h-full flex flex-col gap-20 mt-8  items-center">
-      <div className="flex w-[90%]  place-content-center items-center">
+    <div className=" w-full min-h-screen h-full flex flex-col  items-center">
+      {/* <div className="flex w-[90%]  place-content-center items-center">
         <img
           className="w-full h-full"
           src="/assets/hombre-trabajando-fabrica-metal-soldando-trozo-riel-herramientas-especiales 1.png"
           alt=""
         />
-      </div>
+      </div> */}
+
+      <Hero></Hero>
       {/* SEPARAR ESTO DE AQUI ABAJO EN UN COMPONENTE */}
-      <section className="flex w-[90%] h-[180px]">
-        <ul className=" flex flex-wrap  justify-between w-full h-full">
-          <li className=" w-[48%] h- flex">
-            <Best_product
-              btnText={"Comprar"}
-              name={"Ventana 1"}
-              price={5000}
-              description={"VENTANA DE ALUMINIO AVEMARIA PAPAAA CLASE VENTANA"}
-              image={"/assets/ventanaex 1.png"}
-              key={1}
-            ></Best_product>
-          </li>
-          <li className=" w-[48%] h-full flex">
-            <Best_product
-              btnText={"Comprar"}
-              name={"Ventana 2"}
-              price={5000}
-              description={"VENTANA DE ALUMINIO AVEMARIA PAPAAA CLASE VENTANA"}
-              image={"/assets/ventanaex 1.png"}
-              key={2}
-            ></Best_product>
-          </li>
-        </ul>
-      </section>
+      <TopProductsSection></TopProductsSection>
+      <PromoSection></PromoSection>
+      <CommentSection></CommentSection>
 
       {/* <section className="w-[90%] h-[800px] flex">
         <ul className="w-full h-full flex flex-col">

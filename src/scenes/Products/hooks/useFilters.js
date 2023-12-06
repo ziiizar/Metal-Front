@@ -11,5 +11,5 @@ export function useFilters() {
     });
   };
 
-  return { setFilters, filterProducts };
+  return { setFilters, filterProducts,  };
 }

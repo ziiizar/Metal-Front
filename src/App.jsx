@@ -16,15 +16,17 @@ import { CartProvider } from "./context/Cart.jsx";
 import DetailledOrderPage from "./scenes/Profile/OrdersPage/DetailledOrder/DetailledOrderPage.jsx";
 import HeaderNuevo from "./scenes/global/HeaderNuevo.jsx";
 import DetailledProductPage from "./scenes/DetailledProduct/DetailledProductPage.jsx";
+import HeaderPC from "./scenes/global/HeaderPC.jsx";
+import Checkout from "./scenes/ShoppingCar/Checkout/Checkout.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-fondo min-h-screen h-full  w-full">
+      <div className="bg-fondo min-h-screen h-full  w-full flex items-center flex-col  ">
         <CartProvider>
-          <HeaderNuevo></HeaderNuevo>
+          <HeaderPC></HeaderPC>
           {/* <HeaderPW /> */}
-          <Routes>
+          <Routes >
             <Route path="/Products" Component={ProductsPage}></Route>
             <Route
               path="/Products/:product_id"
@@ -39,7 +41,7 @@ function App() {
             <Route path="/Events/NewEvent" Component={CreateNewEvent}></Route>
             <Route path="/" Component={HomePage}></Route>
             <Route path="/LogIn" Component={LogIn}></Route>
-             <Route path="/SignUp" Component={SignUp}></Route>
+            <Route path="/SignUp" Component={SignUp}></Route>
             {/* <Route path="/ForgotPassword" Component={ForgotP}></Route>  */}
             <Route path="/MyProfile" Component={ProfilePage}></Route>
 
@@ -61,6 +63,7 @@ function App() {
             ></Route>
 
             <Route path="/ShoppingCar" Component={CartPage}></Route>
+            <Route path="/Checkout" Component={Checkout}></Route>
           </Routes>
         </CartProvider>
 
