@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const SignIn = () => {
   const [form, setForm] = useState({
-    username: "",
+    name: "",
     password: "",
     
   });
@@ -29,7 +29,7 @@ const SignIn = () => {
                 className="h-9 rounded-md bg-inherit border-[1px] p-2 text-white outline-none"
                 placeholder="Username"
                 type="text"
-                name="username"
+                name="name"
                 id=""
               />
               <input

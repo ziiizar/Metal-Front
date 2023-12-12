@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const loadRelatedProducts = async (token, category) => {
   const resp = await axios.get(
-    `http://127.0.0.1:8000/Products/Category/${category}`,
+    `http://127.0.0.1:8000/api/Products/Category/${category}`,
     {
       headers: { Authorization: `Bearer ${token}` },
     }

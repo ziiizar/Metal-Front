@@ -1,12 +1,22 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { deleteOrden } from "./services/deleteOrden";
 
 const OrderCard = ({ date, estado, id,  }) => {
 
   const navigate = useNavigate();
+  console.log("id")
+  console.log(id)
+  const token = window.localStorage.getItem("token");
+
 
   const handleClick = () => {
     navigate(`/MyProfile/Orders/Detail/${id}`);
+  }
+
+  const handleDelete = () => {
+    deleteOrden(token,id)
+    // navigate(`/MyProfile/Orders/${1}`)
   }
 
   return (
@@ -22,6 +32,7 @@ const OrderCard = ({ date, estado, id,  }) => {
       </div>
 
       <svg 
+      onClick={handleDelete}
       className="absolute top-1 right-1"
       xmlns="http://www.w3.org/2000/svg"
       width="24"

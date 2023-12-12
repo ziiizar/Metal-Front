@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { loadProductsInOrden } from "../services/loadProductsInOrden";
 
 export default function useDetailledProducts({ ordenData }) {
+  console.log(ordenData)
   const [data, setData] = useState([]);
   const token = window.localStorage.getItem("token");
 

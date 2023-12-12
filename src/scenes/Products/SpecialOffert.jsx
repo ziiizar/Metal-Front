@@ -12,7 +12,7 @@ const SpecialOffert = () => {
         />
       </div>
       <div className="relative w-full h-[40%]  flex place-content-center items-center">
-        <ul className=" grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] grid-rows-[repeat(auto-fit,minmax(80px,1fr))] auto-rows-[minmax(150px,1fr)] gap-5 justify-between w-full h-full  text-black">
+        <ul className=" grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] grid-rows-[repeat(auto-fit,minmax(80px,1fr))] auto-rows-[minmax(150px,1fr)] gap-10 justify-between w-full h-full  text-black">
           <li className="h-full flex"> <ProductCard
               
               name={"Ventana 1"}

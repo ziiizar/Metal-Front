@@ -15,7 +15,7 @@ const LogIn = () => {
     useLoged();
 
     const [form, setForm] = useState({
-      username: "",
+      email: "",
       password: "",
       
     });
@@ -28,15 +28,17 @@ const LogIn = () => {
 
     try {
       const resp = await axios.post(
-        "http://127.0.0.1:8000/Users/Login",
-        { username:form.username, password:form.password },
+        "http://127.0.0.1:8000/api/Users/Login",
+        { email:form.email, password:form.password },
         {
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Acces-Controll-Allow-Origin": "*",
+            "Content-Type": "application/json",
+           
           },
         }
       );
+
+      console.log(form)
 
       const acces_token = resp.data.access_token;
 
@@ -46,6 +48,7 @@ const LogIn = () => {
       window.localStorage.setItem("token", acces_token);
       navigate("/");
     } catch (error) {
+      console.log(form)
       console.log(error.response.data);
     }
 
@@ -68,7 +71,7 @@ return (
                   className="h-auto  bg-inherit border-b-[1px]  border-gray-800 focus:border-purple-600 transition-colors peer px-2 py-[2px]  outline-none w-full"
                   // placeholder="Username"
                   type="text"
-                  name="username"
+                  name="email"
                   id=""
                 />
                 <label htmlFor="input" className="absolute top-1 left-0  peer-focus:text-12 peer-focus:-top-3 peer-valid:text-12 peer-valid:-top-3  transition-all peer-focus:text-black  text-gray-600 pointer-events-none" >Usuario</label>

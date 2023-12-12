@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { loadDetailledOrder } from "../services/loadDetailledOrder";
 
 export function useDetailledOrder(orden_id) {
+  console.log(orden_id)
   const [ordenData, setOrdenData] = useState([]);
   const token = window.localStorage.getItem("token");
 

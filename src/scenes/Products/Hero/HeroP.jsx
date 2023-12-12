@@ -18,7 +18,7 @@ const HeroP = () => {
       {/* <CategoriesBar></CategoriesBar> */}
 <Filters changeFilters={setFilters}></Filters>
       <section className="flex w-[90%] h-full place-content-center items-center ">
-        <ul className=" grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] grid-rows-[repeat(auto-fit,minmax(80px,1fr))] auto-rows-[minmax(150px,1fr)]  justify-between w-full h-full gap-5">
+        <ul className=" grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] grid-rows-[repeat(auto-fit,minmax(80px,1fr))] auto-rows-[minmax(150px,1fr)]  justify-between w-full h-full gap-10">
           <Products products={filterProducts(products)} />
         </ul>
       </section>

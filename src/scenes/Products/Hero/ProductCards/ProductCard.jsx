@@ -95,19 +95,19 @@ const ProductCard = ({ name, image, description, price, btnIcon, id, color }) =>
   // const { addToCart, removeFromCart, isOnCart, cart } = useCart();
   const token = window.localStorage.getItem("token");
 
-  const item = {
-    image: image,
-    name: name,
-    price: price,
-    product_id: id,
-  };
+  // const item = {
+  //   image: image,
+  //   name: name,
+  //   price: price,
+  //   product_id: id,
+  // };
 
-  const handleClickCart = (token, product_id, user_id, quantity) => {
+  const handleClickCart = (token,id, user_id, quantity) => {
     // isOnCart(i)
     //   ? (removeFromCart(i), setOrdened(false))
     //   :
     // (setOrdened(true),
-    addToCart( token, product_id, user_id, quantity);
+    addToCart( token, id, user_id, quantity);
     // console.log(cart);
   };
 
@@ -127,6 +127,7 @@ const ProductCard = ({ name, image, description, price, btnIcon, id, color }) =>
           <h4 className=" font-sans font-bold text-12 h-[70%]">
             {name}
           </h4>
+          <h4>{id}</h4>
           <strong className="text-8 h-[30%]">{price}CUP</strong>
         </div>
 
@@ -141,7 +142,7 @@ const ProductCard = ({ name, image, description, price, btnIcon, id, color }) =>
           <button
             onClick={() =>{
 
-              handleClickCart(token,product_id,user_id,id)
+              handleClickCart(token,id,1,2)
             }
             }
             className=" carrito flex place-content-center items-center h-[45px] w-[45px]"

@@ -17,7 +17,7 @@ const CartPage = () => {
   // const cart = getCart()
   const token = window.localStorage.getItem("token");
 
-  const { cart } = useGetCart(token, 2);
+  const { cart } = useGetCart(token, 1);
   const { data } = useDetailledProductsInCart({ cart: cart });
 
   return (
