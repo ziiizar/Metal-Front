@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 import { defineElement } from "lord-icon-element";
-import { useLoged } from "../../hooks/useLoged";
+import { useLoged } from "../hooks/useLoged";
 
 const HeaderPW = () => {
   const { isLoged } = useLoged();

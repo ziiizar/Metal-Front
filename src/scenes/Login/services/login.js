@@ -1,8 +1,8 @@
-import axios from "axios";
+import metalconf from "../../../api/metalconf";
 
 export const login = async ({ email, password }) => {
-  const resp = await axios.post(
-    "http://127.0.0.1:8000/api/Users/Login",
+  const resp = await metalconf.post(
+    "Users/Login",
     { email, password }
    
   );

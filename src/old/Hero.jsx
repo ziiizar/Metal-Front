@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import {motion} from "framer-motion"
 
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
   const texts = ['Confianza', 'Calidad', 'Innovacion'];
-  const colors = ['#276234BF', '#F99406', '#9747FF']; 
+  const colors = ['#276234BF', '#F38326', '#9747FF']; 
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -14,11 +15,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-[90vh] w-full flex flex-col md:flex-row place-content-center items-center ">
-      <div className="h-[60%] md:h-[80%] w-[90%] md:w-1/2 flex flex-col place-content-center md:place-content-center items-center text-black gap-8">
-        <div className='flex w-full self-start'>
+    <section  data-header-color='white' className="landing w-full flex flex-col md:flex-row place-content-center items-center h-screen">
+      <div className="h-[60%] md:h-[80%] w-[90%] md:w-1/2 flex flex-col place-content-center md:place-content-center items-center text-white gap-8">
+        <div  className='flex w-full self-start '>
           <h4 className="text-5xl font-bold  ml-10">
-            Metalconf es<span style={{ color: colors[textIndex] }}  className="ml-4" >{texts[textIndex]}</span>
+            <span  style={{ color: colors[textIndex] }}  className="ml-4 " >{texts[textIndex]}</span>
           </h4>
         </div>
         <div className="flex place-content-center items-center w-[70%]">
@@ -35,6 +36,7 @@ const Hero = () => {
       <div className="h-[40%] md:h-[80%] w-[90%] md:w-1/2 flex place-content-center">
         <img src="/assets/Muneco 1.png" alt="" />
       </div>
+      <h2 className='text-5xl'>CAMBIAR ESTA VISTA</h2>
     </section>
   );
 };

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FooterPW = () => {
   
   return (
-    <footer className="bg-black h-[300px] w-full  text-white flex flex-col  pt-5 px-36 gap-2 justify-between items-center">
+    <>
       <div className="flex h-1/5 w-full">
         <ul className="flex  w-full h-full justify-between gap-2 text-12">
           <li className="flex  flex-col gap-2 place-content-center items-center">
@@ -127,7 +127,7 @@ const FooterPW = () => {
           &copy; 2023 <b>METALCONF</b> - Todos los Derechos Reservados.
         </small>
       </div>
-    </footer>
+    </>
   );
 };
 

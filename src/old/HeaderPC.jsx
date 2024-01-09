@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useLoged } from "../../hooks/useLoged";
+import { useLoged } from "../store/logedStore";
 
 const HeaderPC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isLoged } = useLoged();
+  const { isAuth } = useLoged(state => state.isAuth);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="w-full h-[10vh] relative flex place-content-center items-center">
-      <header
-        className={`flex flex-col w-[90%] fixed top-4 rounded-xl shadow-xl backdrop-blur-xl z-100 place-content-center items-center md:hidden bg-navbar  ${
+    <>
+      <div
+        className={`flex  flex-col w-[90%]  top-4 rounded-xl shadow-xl backdrop-blur-xl z-100 place-content-center items-center md:hidden bg-navbar  ${
           isOpen ? "h-auto" : "h-14"
         }`}
       >
@@ -74,9 +74,9 @@ const HeaderPC = () => {
             </button>
           </li>
         </ul>
-      </header>
+      </div>
 
-      <header className="hidden md:flex w-[90%] md:w-[65%] h-14 place-content-center items-center fixed top-4 rounded-xl shadow-xl  text-black backdrop-blur-xl z-100 bg-navbar">
+      <div className="hidden md:flex w-[90%] md:w-[65%] h-14 place-content-center items-center  top-4 rounded-xl shadow-xl  text-black backdrop-blur-xl z-100 bg-navbar">
         <div className="w-full h-full flex  justify-around items-center">
           <div className="h-full flex w-[90%] justify-around py-3  items-center ">
             <button className="h-[90%] flex">
@@ -136,8 +136,8 @@ const HeaderPC = () => {
             </div> */}
           </button>
         </div>
-      </header>
-    </div>
+      </div>
+    </>
   );
 };
 

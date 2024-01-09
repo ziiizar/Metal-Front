@@ -1,8 +1,8 @@
 import React from "react";
-import Terms from "./Terms";
-import Title from "./Title";
+import Terms from "../scenes/Login/Terms";
+import Title from "../scenes/Login/Title";
 import Welcome from "./Welcome";
-import Button from "./Button";
+import Button from "../scenes/Login/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

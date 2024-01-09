@@ -1,12 +1,15 @@
-const PromoCard = ({ title, decription, img }) => {
+const PromoCard = ({ title, price, img }) => {
   return (
-    <article className="flex  w-full h-full relative ">
-      <div className="flex w-[30%] h-full absolute z-10 place-content-center items-center">
-        <img className="h-[180px] w-[150px]" src={img} alt="" />
+    <article className="flex flex-col w-full h-full  p-1 bg-babyPowder shadow-md rounded-md">
+      <div className="flex h-[70%] w-full  gap-2 rounded-md">
+        <img className="rounded-md" src={img} alt="" />
       </div>
-      <div className="flex flex-col bg-gradient-to-br from-zinc-400 to-zinc-300 items-end gap-4  w-[70%] h-full text-black rounded-md absolute ">
-        <h3>{title}</h3>
-        <p>{decription}</p>
+      <div className="flex  w-full text-black rounded-md  justify-between">
+        <div className="flex flex-col gap-2 ">
+          <h3>{title}</h3>
+          <p>{price}</p>
+        </div>
+        <button className="w-8 h-8 bg-naranja rounded-full">C</button>
       </div>
     </article>
   );

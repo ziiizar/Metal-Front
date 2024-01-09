@@ -1,14 +1,14 @@
 import { search } from "./services/search";
+import { useState } from "react";
 
 const SearchBar = ({products}) => {
+  const [query, setQuery] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const field = new window.FormData(e.target);
-    const query = field.get("query");
 
     if (query === "") return;
     const searchedProducts = search(query);
-
 
     console.log(searchedProducts);
     return searchedProducts
@@ -17,9 +17,9 @@ const SearchBar = ({products}) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex md:w-[65%] w-[90%] h-10 rounded-full bg-stone-400 text-black py-1 px-3 place-content-center items-center"
+      className="flex h-10 rounded-full bg-stone-400 text-black py-1 px-3 place-content-center items-center"
     >
-      <button name="search" className="">
+      <button type="submit" disabled={!query} name="search" className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="15"
@@ -33,9 +33,12 @@ const SearchBar = ({products}) => {
           ></path>
         </svg>
       </button>
-      <input
+      <input 
+        required
         name="query"
-        className="w-full h-full bg-inherit rounded-full outline-none px-1 placeholder:text-black"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        className="transition-all duration-1000 ease-in-out w-16 focus:w-[200px] valid:w-[200px] h-full bg-inherit rounded-full outline-none px-1 placeholder:text-slate-800"
         placeholder="Buscar"
         type="text"
         id=""

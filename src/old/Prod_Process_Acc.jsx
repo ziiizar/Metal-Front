@@ -1,5 +1,4 @@
-import React from "react";
-import Accordion from "../../Components/Acc/Accordion";
+import Accordion from "../Components/Acc/Accordion";
 
 const Prod_Process_Acc = () => {
   return (

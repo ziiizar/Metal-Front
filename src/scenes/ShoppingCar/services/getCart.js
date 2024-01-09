@@ -1,10 +1,8 @@
-import axios from "axios";
+import metalconf from "../../../api/metalconf"
 
 
-export async function getCart (token, user_id) {
-    const resp = await axios.get(`http://127.0.0.1:8000/api/Cart/Get/${user_id}`,  {
-        headers: { Authorization: `Bearer ${token}` },
-      }
+export async function getCart (user_id) {
+    const resp = await metalconf.get(`Cart/Get/${user_id}`
     )
 
     const cart = resp.data

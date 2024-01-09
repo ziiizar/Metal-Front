@@ -2,9 +2,9 @@ import { loadProductById } from "./loadProductById";
 
 // arreglado ----> en el loadProductById se está returnando un valor
 // y no se estaba trabajando con el
-export async function loadProductsInCart(token, cartData) {
+export async function loadProductsInCart( cartData) {
   const productPromises = cartData.map((product) => {
-    return loadProductById(token, product.product_id);
+    return loadProductById( product.product_id);
   });
 
   try {

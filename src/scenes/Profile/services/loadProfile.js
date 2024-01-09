@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//TODO falta hacerlo en el backend para cambiarlo en axios por metalconf
+
 export const loadProfile = async (user_id,token) => {
     
    const resp = await axios

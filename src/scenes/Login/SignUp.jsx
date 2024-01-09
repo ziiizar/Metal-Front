@@ -1,6 +1,6 @@
 import Terms from "./Terms";
 import Title from "./Title";
-import Welcome from "./Welcome";
+import LoginLayout from "../../Layouts/LoginLayout";
 import { Link } from 'react-router-dom';
 import Button from "./Button";
 import { useState } from "react";
@@ -33,7 +33,7 @@ const SignUp = () => {
   };
 
   return (
-    <Welcome>
+    <LoginLayout>
 
       
     <div className="flex flex-col justify-between h-3/4 gap-y-4 text-black z-20">
@@ -102,7 +102,7 @@ const SignUp = () => {
             link={<Link className="hover:text-orange-800" to="/LogIn">Iniciar Sesion</Link>}
           />
      
-    </Welcome>
+    </LoginLayout>
   );
 };
 

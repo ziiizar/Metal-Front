@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//TODO cambiar el axios por metalconf cuando se haga este metodo en el backend
+
 export const addToFavs = async (token, product_id) => {
   
   const resp = await axios.put(

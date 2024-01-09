@@ -1,8 +1,8 @@
-import axios from "axios";
+import metalconf from "../../../api/metalconf"
 
 export const loadRelatedProducts = async (token, category) => {
-  const resp = await axios.get(
-    `http://127.0.0.1:8000/api/Products/Category/${category}`,
+  const resp = await metalconf.get(
+    `Products/Category/${category}`,
     {
       headers: { Authorization: `Bearer ${token}` },
     }

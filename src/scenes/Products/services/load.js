@@ -1,10 +1,12 @@
-import axios from "axios";
+import metalconf from "../../../api/metalconf";
 
 export const load = async () => {
-  const resp = await axios.get("http://127.0.0.1:8000/api/Products", {
-    headers: { "Access-Control-Allow-Origin": "*" },
-  });
+  const resp = await metalconf.get("Products");
   const setProducts = resp.data;
 
   return setProducts;
 };
+
+// , {
+//   headers: { "Access-Control-Allow-Origin": "*" },
+// }

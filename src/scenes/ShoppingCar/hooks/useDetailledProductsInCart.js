@@ -3,15 +3,14 @@ import { loadProductsInCart } from "../services/loadProductsInCart";
 
 export default function useDetailledProductsInCart({ cart }) {
   const [data, setData] = useState([]);
-  const token = window.localStorage.getItem("token");
 
   useEffect(() => {
     const fetchData = async () => {
-      const newData = await loadProductsInCart(token, cart);
+      const newData = await loadProductsInCart( cart);
       setData(newData);
     };
     fetchData();
-  }, [token, cart]);
+  }, [ cart]);
 
   return { data };
 }

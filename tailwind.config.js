@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       gridAutoColumns: {
@@ -26,7 +27,6 @@ export default {
         fondo: "#E0E0E5",
         salmon: "#FB9E75",
         violeta: "#9747FF",
-        naranja: "#F99406",
         verde: "#276234BF",
         gris: "rgba(14, 14, 14, 0.10)",
         negro:"rgba(7, 13, 10, 0.90)",
@@ -37,8 +37,18 @@ export default {
         verdenegro: "#081C1E",
         commentGradient1: "rgba(0, 0, 0, 0.80) 8.72%" ,
         commentGradient2: "rgba(0, 0, 0, 0.80) 94.57%",
-        
+        dutchWhite: "#E8DAB2",
+        platinum: "#EAEAEA",
+        light: "#FFFCF9",
+        dark: "#494850",
+        naranja: "#DD6E42",
+        payneGray: "#4F6D7A",
+        columbiaBlue: "#C0D6DF",
+        babyPowder: "#FFFCF9",
       },
+      // backgroundImage: {
+      //   'hero': "url('/assets/Untitled3.jpg')",
+      // }
     },
   },
   plugins: [],

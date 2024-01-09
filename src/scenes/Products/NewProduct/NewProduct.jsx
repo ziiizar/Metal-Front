@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import HeaderMainFooterLayout from "../../../Layouts/HeaderMainFooterLayout";
 
 const NewProduct = () => {
   return (
@@ -18,18 +19,24 @@ const NewProduct = () => {
     //     </button>
     //   </form>
     // </div>
-
-    <div className="relative">
-                <input
-                  // onChange={handleForm}
-                  className="h-auto  bg-inherit border-b-[1px]  border-gray-800 focus:border-purple-600 transition-colors peer px-2  outline-none "
-                  // placeholder="Username"
-                  type="text"
-                  name="username"
-                  id=""
-                />
-                <label htmlFor="input" className="absolute top-1 left-0 cursor-text peer-focus:text-8 peer-focus:-top-4 transition-all  text-black" >Username</label>
-              </div>
+    <HeaderMainFooterLayout>
+      <div className="relative">
+        <input
+          // onChange={handleForm}
+          className="h-auto  bg-inherit border-b-[1px]  border-gray-800 focus:border-purple-600 transition-colors peer px-2  outline-none "
+          // placeholder="Username"
+          type="text"
+          name="username"
+          id=""
+        />
+        <label
+          htmlFor="input"
+          className="absolute top-1 left-0 cursor-text peer-focus:text-8 peer-focus:-top-4 transition-all  text-black"
+        >
+          Username
+        </label>
+      </div>
+    </HeaderMainFooterLayout>
   );
 };
 

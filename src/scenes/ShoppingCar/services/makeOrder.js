@@ -1,5 +1,8 @@
 import axios from "axios";
 
+//TODO falta hacerlo en el backend para cambiarlo en axios por metalconf
+
+
 export async function makeOrder(token, orden, productsIds) {
   console.log(orden)
   console.log(productsIds)

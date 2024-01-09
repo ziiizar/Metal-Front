@@ -1,7 +1,6 @@
 import ProductCard from "./ProductCards/ProductCard";
 import FavIcon from "./ProductCards/FavIcon";
 import PropTypes from "prop-types";
-import Best_product from "../../home/Best_product";
 
 const Products = ({ products }) => {
   console.log(products);

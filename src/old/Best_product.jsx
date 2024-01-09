@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../hooks/useCart";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
